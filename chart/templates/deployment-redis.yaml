@@ -2,13 +2,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ots.fullname" . }}
+  name: {{ include "ots.fullname" . }}-redis
   labels:
     {{- include "ots.redisLabels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
-  {{- end }}
+  replicas: 1
   selector:
     matchLabels:
       {{- include "ots.redisSelectorLabels" . | nindent 6 }}
