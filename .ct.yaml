@@ -1,5 +1,5 @@
 chart-dirs:
-  - chart/
+  - .
 debug: true
 target-branch: main
 check-version-increment: false
