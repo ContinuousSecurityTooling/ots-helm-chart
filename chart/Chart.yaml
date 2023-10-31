@@ -4,3 +4,9 @@ name: ots
 version: 0.1.2
 # renovate: datasource=github-tags depName=ContinuousSecurityTooling/ots
 appVersion: "v1.9.2"
+annotations:
+  artifacthub.io/links: |
+      - name: Helm Chart
+        url: https://github.com/ContinuousSecurityTooling/ots-helm-chart
+      - name: Application
+        url: https://github.com/Luzifer/ots
