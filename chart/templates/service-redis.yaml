@@ -1,0 +1,17 @@
+{{- if .Values.redis.enabled -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ots.fullname" . }}-redis
+  labels:
+    {{- include "ots.redisLabels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 6379
+      targetPort: redis-tcp
+      protocol: TCP
+      name: redis
+  selector:
+    {{- include "ots.redisSelectorLabels" . | nindent 4 }}
+ {{- end }}

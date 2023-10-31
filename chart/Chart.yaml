@@ -1,0 +1,6 @@
+apiVersion: v2
+description: A Helm chart for deploying OTS
+name: ots
+version: 0.1.0
+# renovate: datasource=github-tags depName=ContinuousSecurityTooling/ots
+appVersion: "v1.9.2"
