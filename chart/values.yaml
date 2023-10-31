@@ -66,7 +66,7 @@ ingress:
   tls: []
 
 # -- (map) environment variables for app config
-env: 
+env:
   - name: SECRET_EXPIRY
     value: "172800"
 
