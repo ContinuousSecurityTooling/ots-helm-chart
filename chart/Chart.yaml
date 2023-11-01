@@ -2,7 +2,7 @@ apiVersion: v2
 description: A Helm chart for deploying OTS
 name: ots
 version: 0.1.3
-# renovate: datasource=github-tags depName=ContinuousSecurityTooling/ots
+# renovate: datasource=github-tags depName=luzifer/ots
 appVersion: "v1.9.2"
 annotations:
   artifacthub.io/links: |
