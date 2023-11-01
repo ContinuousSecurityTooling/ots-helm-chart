@@ -2,7 +2,7 @@
 
 Kubernetes Chart for [OTS](https://github.com/Luzifer/ots)
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/ots)](https://artifacthub.io/packages/search?repo=ots)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/ots)](https://artifacthub.io/packages/helm/ots/ots)
 
 ## Deployment
 
