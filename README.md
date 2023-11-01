@@ -1,4 +1,4 @@
-# k8s-olm
+# OTS
 
 Kubernetes Chart for [OTS](https://github.com/Luzifer/ots)
 
