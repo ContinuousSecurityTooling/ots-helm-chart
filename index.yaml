@@ -8,6 +8,21 @@ entries:
         - name: Application
           url: https://github.com/Luzifer/ots
     apiVersion: v2
+    appVersion: v1.10.0
+    created: "2023-11-15T14:42:13.458904161Z"
+    description: A Helm chart for deploying OTS
+    digest: 3efc77144c45787a6c80572a90d428bd3e62bd796e6e32f5d4107b4fa6429810
+    name: ots
+    urls:
+    - https://github.com/ContinuousSecurityTooling/ots-helm-chart/releases/download/ots-0.1.5/ots-0.1.5.tgz
+    version: 0.1.5
+  - annotations:
+      artifacthub.io/links: |
+        - name: Helm Chart
+          url: https://github.com/ContinuousSecurityTooling/ots-helm-chart
+        - name: Application
+          url: https://github.com/Luzifer/ots
+    apiVersion: v2
     appVersion: v1.9.2
     created: "2023-11-15T14:26:20.702840517Z"
     description: A Helm chart for deploying OTS
@@ -16,4 +31,4 @@ entries:
     urls:
     - https://github.com/ContinuousSecurityTooling/ots-helm-chart/releases/download/ots-0.1.4/ots-0.1.4.tgz
     version: 0.1.4
-generated: "2023-11-15T14:26:20.702936418Z"
+generated: "2023-11-15T14:42:13.458911955Z"
