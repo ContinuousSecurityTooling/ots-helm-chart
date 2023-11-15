@@ -7,10 +7,10 @@
   "regexManagers": [
     {
       "customType": "regex",
-      "description": "Update _VERSION variables in YAML files",
-      "fileMatch": ["\\.yaml$"],
+      "description": "Update image variables in YAML files",
+      "fileMatch": ["\\.yaml$", "\\.yaml\\.tpl$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[^\\s]+?)(?: (lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?\\s.+?_version: (?<currentValue>.+?)\\s"
+        "# renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?)( extractVersion=(?<extractVersion>.+?))?( versioning=(?<versioning>.+?))?( registryUrl=(?<registryUrl>.*?))?\\s*(appVersion|image|tag):\\s*\"?(?<currentValue>.+?)\"?\\s"
       ],
       "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}",
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
