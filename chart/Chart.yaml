@@ -3,7 +3,7 @@ description: A Helm chart for deploying OTS
 name: ots
 version: 0.1.4
 # renovate: datasource=github-tags depName=luzifer/ots
-appVersion: "v1.9.2"
+appVersion: "v1.10.0"
 annotations:
   artifacthub.io/links: |
       - name: Helm Chart
