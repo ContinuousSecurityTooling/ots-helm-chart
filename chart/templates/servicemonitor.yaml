@@ -1,0 +1,29 @@
+{{- if .Values.metrics.enabled -}}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "ots.serviceAccountName" . }}
+  labels:
+    {{- include "ots.labels" . | nindent 4 }}
+spec:
+  endpoints:
+    - path: /metrics
+      port: ots-tcp
+      scheme: http
+metrics:
+      {{- if .Values.metrics.serviceMonitor.interval }}
+      interval: {{ .Values.metrics.serviceMonitor.interval }}
+      {{- end }}
+      honorLabels: {{ .Values.metrics.serviceMonitor.honorLabels }}
+      {{- if .Values.metrics.serviceMonitor.scrapeTimeout }}
+      scrapeTimeout: {{ .Values.metrics.serviceMonitor.scrapeTimeout }}
+      {{- end }}
+      relabelings:
+        {{- toYaml .Values.metrics.serviceMonitor.relabelings | nindent 8 }}
+  namespaceSelector:
+    matchNames:
+      -  {{ .Release.Namespace }}
+  selector:
+    matchLabels:
+      {{- include "ots.selectorLabels" . | nindent 6 }}
+{{- end }}
