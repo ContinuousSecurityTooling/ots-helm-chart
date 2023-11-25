@@ -24,6 +24,17 @@ redis:
       cpu: 100m
       memory: 128Mi
 
+metrics:
+  enabled: false
+  serviceMonitor:
+    honorLabels: true
+    scrapeTimeout: 10s
+    relabelings:
+      - replacement: ots
+        targetLabel: application
+      - sourceLabels:
+          - pod
+        targetLabel: instance
 
 imagePullSecrets: []
 nameOverride: ''
