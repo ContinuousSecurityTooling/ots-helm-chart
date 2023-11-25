@@ -76,6 +76,9 @@ ingress:
   hostname: ''
   tls: []
 
+# -- (map) customization options, see https://github.com/Luzifer/ots/wiki/Customization
+customizations: {}
+
 # -- (map) environment variables for app config
 env:
   - name: SECRET_EXPIRY
