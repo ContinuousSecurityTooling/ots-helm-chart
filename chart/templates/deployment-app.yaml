@@ -13,8 +13,12 @@ spec:
       {{- include "ots.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
+        # used to detect config changes to trigger update
+        {{- $configEnv := .Values.env }}
+        {{- $configMap := include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+        checksum/config: {{ printf "%s-%s-%s-%s" $configEnv $configMap | sha256sum }}
+      {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
