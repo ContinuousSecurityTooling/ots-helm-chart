@@ -42,4 +42,12 @@ spec:
                 name: {{ include "ots.fullname" . }}
                 port:
                   name: app
+          # redirect metrics path to non existing service to prevent public access: That will return a "503 Service Temporarily Unavailable" on that specific URL
+          - path: /metrics
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "ots.fullname" . }}-non-existing
+                port:
+                  name: app
 {{- end }}
