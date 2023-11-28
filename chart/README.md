@@ -13,7 +13,7 @@ A Helm chart for deploying OTS
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| customizations | map | `{}` | customization options, see https://github.com/Luzifer/ots/wiki/Customization |
+| customizations | map | `{"metricsAllowedSubnets":["10.0.0.0/24"]}` | customization options, see https://github.com/Luzifer/ots/wiki/Customization |
 | env | map | `[{"name":"SECRET_EXPIRY","value":"172800"}]` | environment variables for app config |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
