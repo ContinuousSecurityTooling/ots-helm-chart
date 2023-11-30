@@ -80,7 +80,7 @@ ingress:
 customizations:
   metricsAllowedSubnets:
     # default to Pod IPs
-    - 10.0.0.0/24
+    - 10.0.0.0/8
 
 # -- (map) environment variables for app config
 env:
