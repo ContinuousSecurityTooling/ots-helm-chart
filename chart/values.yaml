@@ -77,8 +77,8 @@ ingress:
   tls: []
 
 # -- (map) customization options, see https://github.com/Luzifer/ots/wiki/Customization
-customizations: 
-  metricsAllowedSubnets: 
+customizations:
+  metricsAllowedSubnets:
     # default to Pod IPs
     - 10.0.0.0/24
 
