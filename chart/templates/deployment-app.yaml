@@ -64,9 +64,8 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - mountPath: /etc/ots/customize.yaml
-              subPath: customize.yml
-              name: ots-config
+            - name: ots-config
+              mountPath: /etc/ots/
               readOnly: true
       {{- with .Values.nodeSelector }}
       nodeSelector:
