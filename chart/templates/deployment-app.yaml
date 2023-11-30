@@ -16,7 +16,7 @@ spec:
       annotations:
         # used to detect config changes to trigger update
         {{- $configEnv := .Values.env }}
-        {{- $configMap := .Values.Values.customizations | toYaml | sha256sum }}
+        {{- $configMap := .Values.customizations | toYaml | sha256sum }}
         checksum/config: {{ printf "%s-%s" $configEnv $configMap | sha256sum }}
       {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
