@@ -22,7 +22,7 @@ metrics:
         {{- toYaml .Values.metrics.serviceMonitor.relabelings | nindent 8 }}
   namespaceSelector:
     matchNames:
-      -  {{ .Release.Namespace }}
+      - {{ .Release.Namespace }}
   selector:
     matchLabels:
       {{- include "ots.selectorLabels" . | nindent 6 }}
