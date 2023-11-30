@@ -1,6 +1,6 @@
 # ots
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![AppVersion: v1.10.0](https://img.shields.io/badge/AppVersion-v1.10.0-informational?style=flat-square)
+![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat-square) ![AppVersion: v1.10.0](https://img.shields.io/badge/AppVersion-v1.10.0-informational?style=flat-square)
 
 A Helm chart for deploying OTS
 
@@ -13,7 +13,7 @@ A Helm chart for deploying OTS
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| customizations | map | `{"metricsAllowedSubnets":["10.0.0.0/24"]}` | customization options, see https://github.com/Luzifer/ots/wiki/Customization |
+| customizations | map | `{"metricsAllowedSubnets":["10.0.0.0/8"]}` | customization options, see https://github.com/Luzifer/ots/wiki/Customization |
 | env | map | `[{"name":"SECRET_EXPIRY","value":"172800"}]` | environment variables for app config |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
