@@ -10,7 +10,6 @@ spec:
     - path: /metrics
       port: ots-tcp
       scheme: http
-metrics:
       {{- if .Values.metrics.serviceMonitor.interval }}
       interval: {{ .Values.metrics.serviceMonitor.interval }}
       {{- end }}
