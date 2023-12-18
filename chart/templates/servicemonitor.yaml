@@ -2,7 +2,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{ include "ots.serviceAccountName" . }}
+  name: {{ include "ots.fullname" . }}
   labels:
     {{- include "ots.labels" . | nindent 4 }}
 spec:
