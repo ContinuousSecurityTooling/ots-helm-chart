@@ -47,6 +47,7 @@ Selector labels
 */}}
 {{- define "ots.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "ots.name" . }}
+app.kubernetes.io/component: server
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
@@ -65,6 +66,7 @@ Selector labels
 */}}
 {{- define "ots.redisSelectorLabels" -}}
 app.kubernetes.io/name: {{ include "ots.name" . }}-redis
+app.kubernetes.io/component: redis
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 

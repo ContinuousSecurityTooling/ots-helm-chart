@@ -4,11 +4,16 @@ env:
 ingress:
   enabled: true
   annotations:
-    kubernetes.io/ingress.class: someClass
+    kubernetes.io/ingress.class: traefik
     kubernetes.io/tls-acme: "true"
     cert-manager.io/cluster-issuer: ca-issuer
-  hostname: my-hostname.sample.com
+  hostname: ots2.m13t.de
   tls:
     secretName: ots-tls
+customizations:
+  metricsAllowedSubnets:
+    # default to Pod IPs
+    - 127.0.0.1/24
+    - 10.0.0.0/8
 metrics:
   enabled: true
