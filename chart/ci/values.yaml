@@ -1,0 +1,14 @@
+env:
+  - name: SOME_ENV
+    value: some value
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: someClass
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: ca-issuer
+  hostname: my-hostname.sample.com
+  tls:
+    secretName: ots-tls
+metrics:
+  enabled: true
