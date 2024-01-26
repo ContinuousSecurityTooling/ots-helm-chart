@@ -9,12 +9,12 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   # renovate: datasource=docker depName=luzifer/ots
-  tag: "v1.12.0"
+  tag: 'v1.12.0'
 
 redis:
   enabled: true
   # renovate: datasource=docker depName=redis
-  version: "7.2.2"
+  version: '7.2.2'
   # @ignore, Configure resource limits
   resources:
     limits:
@@ -30,8 +30,6 @@ metrics:
     honorLabels: true
     scrapeTimeout: 10s
     relabelings:
-      - targetLabel: job
-        replacement: ots-metrics
       - targetLabel: application
         replacement: ots
       - targetLabel: instance
@@ -71,12 +69,15 @@ securityContext:
 
 ingress:
   enabled: false
-  className: ""
-  annotations: {}
+  className: ''
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hostname: ''
-  tls: []
+  #        tls:
+  #          secretName: m13t-hp-tls
+  tls: {}
 
 # -- (map) customization options, see https://github.com/Luzifer/ots/wiki/Customization
 customizations:
@@ -88,7 +89,7 @@ customizations:
 # -- (map) environment variables for app config
 env:
   - name: SECRET_EXPIRY
-    value: "172800"
+    value: '172800'
 
 # @ignore, Configure resource limits
 resources:
