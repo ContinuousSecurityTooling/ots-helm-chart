@@ -34,8 +34,8 @@ A Helm chart for deploying OTS
 | metrics.serviceMonitor.scrapeTimeout | string | `"10s"` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
-| peristence.storageClass | string | `""` |  |
-| peristence.volumeSize | string | `"1Gi"` |  |
+| persistence.storageClass | string | `""` |  |
+| persistence.volumeSize | string | `"1Gi"` |  |
 | podAnnotations | object | `{}` |  |
 | redis.enabled | bool | `true` |  |
 | redis.version | string | `"7.2.2"` |  |

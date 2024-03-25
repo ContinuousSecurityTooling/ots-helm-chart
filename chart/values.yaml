@@ -100,7 +100,7 @@ resources:
     cpu: 100m
     memory: 128Mi
 
-peristence:
+persistence:
   storageClass: ''
   volumeSize: 1Gi
 
