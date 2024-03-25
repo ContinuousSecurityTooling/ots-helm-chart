@@ -6,12 +6,12 @@ metadata:
   labels:
     {{- include "ots.labels" . | nindent 4 }}
 spec:
-  {{- if .Values.peristence.storageClass -}}
-  storageClassName: {{ .Values.peristence.storageClass }}
+  {{- if .Values.persistence.storageClass }}
+  storageClassName: {{ .Values.persistence.storageClass | quote }}
   {{- end }}
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {{ .Values.peristence.volumeSize }}
+      storage: "{{ .Values.persistence.volumeSize }}"
  {{- end }}
