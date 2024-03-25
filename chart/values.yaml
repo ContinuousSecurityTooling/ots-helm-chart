@@ -100,6 +100,10 @@ resources:
     cpu: 100m
     memory: 128Mi
 
+peristence:
+  storageClass: ''
+  volumeSize: 1Gi
+
 autoscaling:
   enabled: false
   minReplicas: 1

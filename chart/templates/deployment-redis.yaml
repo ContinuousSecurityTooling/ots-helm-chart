@@ -54,7 +54,7 @@ spec:
       volumes:
         - name: storage
           persistentVolumeClaim:
-            claimName: {{ include "ots.fullname" . }}
+            claimName: {{ include "ots.fullname" . }}-redis
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

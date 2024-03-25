@@ -2,13 +2,16 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "ots.fullname" . }}
+  name: {{ include "ots.fullname" . }}-redis
   labels:
     {{- include "ots.labels" . | nindent 4 }}
 spec:
+  {{- if .Values.peristence.storageClass -}}
+  storageClassName: {{ .Values.peristence.storageClass }}
+  {{- end }}
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: {{ .Values.peristence.volumeSize }}
  {{- end }}
