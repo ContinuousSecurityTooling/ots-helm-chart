@@ -102,6 +102,8 @@ resources:
 
 persistence:
   storageClass: ''
+  accessModes:
+    - ReadWriteOnce
   volumeSize: 1Gi
 
 autoscaling:

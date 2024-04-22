@@ -1,6 +1,6 @@
 # ots
 
-![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![AppVersion: 1.11.1](https://img.shields.io/badge/AppVersion-1.11.1-informational?style=flat-square)
+![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square) ![AppVersion: 1.11.1](https://img.shields.io/badge/AppVersion-1.11.1-informational?style=flat-square)
 
 A Helm chart for deploying OTS
 
@@ -34,6 +34,7 @@ A Helm chart for deploying OTS
 | metrics.serviceMonitor.scrapeTimeout | string | `"10s"` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
+| persistence.accessModes[0] | string | `"ReadWriteOnce"` |  |
 | persistence.storageClass | string | `""` |  |
 | persistence.volumeSize | string | `"1Gi"` |  |
 | podAnnotations | object | `{}` |  |

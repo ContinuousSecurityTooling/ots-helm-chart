@@ -9,8 +9,7 @@ spec:
   {{- if .Values.persistence.storageClass }}
   storageClassName: {{ .Values.persistence.storageClass | quote }}
   {{- end }}
-  accessModes:
-    - ReadWriteOnce
+  accessModes: {{ .Values.persistence.accessModes }}
   resources:
     requests:
       storage: "{{ .Values.persistence.volumeSize }}"
