@@ -14,7 +14,7 @@ image:
 redis:
   enabled: true
   # renovate: datasource=docker depName=redis
-  version: '7.2.2'
+  version: '7.2.5'
   # @ignore, Configure resource limits
   resources:
     limits:
