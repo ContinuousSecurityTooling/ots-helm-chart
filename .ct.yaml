@@ -4,4 +4,4 @@ debug: true
 target-branch: main
 check-version-increment: false
 validate-maintainers: false
-helm-extra-args: -f chart/ci/value.yaml
+helm-extra-args: -f chart/ci/values.yaml
