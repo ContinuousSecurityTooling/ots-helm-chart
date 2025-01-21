@@ -1,6 +1,17 @@
 name: Build
 
 on:
+  # allow to manual run tests
+  workflow_dispatch:
+      inputs:
+          runChartTesting:
+              description: 'Maven CLI opts, e.g. -U'
+              required: false
+              type: choice
+              options:
+                - yes
+                - no
+              default: 'no'
   pull_request:
   merge_group:
   push:
@@ -41,18 +52,19 @@ jobs:
           fi
 
       - name: Run chart-testing (lint)
-        if: steps.list-changed.outputs.changed == 'true'
+        if: steps.list-changed.outputs.changed == 'true' || ${{ inputs.runChartTesting }} == 'yes'
         run: ct lint --config .ct.yaml --target-branch ${{ github.event.repository.default_branch }}
 
       - name: Create kind cluster
-        if: steps.list-changed.outputs.changed == 'true'
+        if: steps.list-changed.outputs.changed == 'true' || ${{ inputs.runChartTesting }} == 'yes'
         uses: helm/kind-action@v1.12.0
 
       - name: Run chart-testing (install)
-        if: steps.list-changed.outputs.changed == 'true'
+        if: steps.list-changed.outputs.changed == 'true' || ${{ inputs.runChartTesting }} == 'yes'
         run: ct install --config .ct.yaml --target-branch ${{ github.event.repository.default_branch }}
 
       - name: Download & install kube-prom-stack
+        if: steps.list-changed.outputs.changed == 'true' || ${{ inputs.runChartTesting }} == 'yes'
         run: |
           mkdir charts
           cd charts
@@ -61,5 +73,5 @@ jobs:
           helm install kube-prom prometheus-community/kube-prometheus-stack
 
       - name: Run chart-testing (install - with args)
-        if: steps.list-changed.outputs.changed == 'true'
+        if: steps.list-changed.outputs.changed == 'true' || ${{ inputs.runChartTesting }} == 'yes'
         run: ct install --target-branch ${{ github.event.repository.default_branch }} --helm-extra-set-args "-f chart/ci.values.yaml"
