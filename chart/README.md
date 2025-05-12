@@ -1,6 +1,6 @@
 # ots
 
-![Version: 1.3.0](https://img.shields.io/badge/Version-1.3.0-informational?style=flat-square) ![AppVersion: 1.15.1](https://img.shields.io/badge/AppVersion-1.15.1-informational?style=flat-square)
+![Version: 1.4.0](https://img.shields.io/badge/Version-1.4.0-informational?style=flat-square) ![AppVersion: 1.17.0](https://img.shields.io/badge/AppVersion-1.17.0-informational?style=flat-square)
 
 A Helm chart for deploying OTS
 
@@ -18,7 +18,7 @@ A Helm chart for deploying OTS
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"luzifer/ots"` |  |
-| image.tag | string | `"v1.15.1"` |  |
+| image.tag | string | `"v1.17.0"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.className | string | `""` |  |
@@ -39,7 +39,7 @@ A Helm chart for deploying OTS
 | persistence.volumeSize | string | `"1Gi"` |  |
 | podAnnotations | object | `{}` |  |
 | redis.enabled | bool | `true` |  |
-| redis.version | string | `"7.4.2"` |  |
+| redis.version | string | `"8.0.0"` |  |
 | replicaCount | int | `1` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
