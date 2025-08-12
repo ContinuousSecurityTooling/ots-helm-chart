@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/ContinuousSecurityTooling/ots-helm-chart/compare/v1.4.0...v1.5.0) (2025-08-12)
+
+
+### Bug Fixes
+
+* **Ingress:** Move non-existing part to service to reduce error logging noise ([7de1696](https://github.com/ContinuousSecurityTooling/ots-helm-chart/commit/7de16967826fafa20e9930d7d8d64d13a414c460))
+
+
+
+# [1.4.0](https://github.com/ContinuousSecurityTooling/ots-helm-chart/compare/v1.3.0...v1.4.0) (2025-05-12)
+
+
 # [1.3.0](https://github.com/ContinuousSecurityTooling/ots-helm-chart/compare/v1.1.1...v1.3.0) (2025-01-21)
 
 
