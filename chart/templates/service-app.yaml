@@ -11,5 +11,9 @@ spec:
       targetPort: ots-tcp
       protocol: TCP
       name: app
+    - port: 9999
+      targetPort: non-existing
+      protocol: TCP
+      name: non-existing
   selector:
     {{- include "ots.selectorLabels" . | nindent 4 }}
