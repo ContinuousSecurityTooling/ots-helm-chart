@@ -1,6 +1,6 @@
 # ots
 
-![Version: 1.6.0](https://img.shields.io/badge/Version-1.6.0-informational?style=flat-square) ![AppVersion: 1.19.1](https://img.shields.io/badge/AppVersion-1.19.1-informational?style=flat-square)
+![Version: 1.7.0](https://img.shields.io/badge/Version-1.7.0-informational?style=flat-square) ![AppVersion: 1.20.0](https://img.shields.io/badge/AppVersion-1.20.0-informational?style=flat-square)
 
 A Helm chart for deploying OTS
 
@@ -40,7 +40,7 @@ A Helm chart for deploying OTS
 | podAnnotations | object | `{}` |  |
 | redis.enabled | bool | `true` |  |
 | redis.repository | string | `"redis"` |  |
-| redis.version | string | `"8.2.2"` |  |
+| redis.version | string | `"8.2.3"` |  |
 | replicaCount | int | `1` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
