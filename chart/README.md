@@ -17,7 +17,7 @@ A Helm chart for deploying OTS
 | env | map | `[{"name":"SECRET_EXPIRY","value":"172800"}]` | environment variables for app config |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"luzifer/ots"` |  |
+| image.repository | string | `"ghcr.io/luzifer/ots"` |  |
 | image.tag | string | `"v1.17.2"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
@@ -40,7 +40,7 @@ A Helm chart for deploying OTS
 | podAnnotations | object | `{}` |  |
 | redis.enabled | bool | `true` |  |
 | redis.repository | string | `"redis"` |  |
-| redis.version | string | `"8.2.3"` |  |
+| redis.version | string | `"8.4.0"` |  |
 | replicaCount | int | `1` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |

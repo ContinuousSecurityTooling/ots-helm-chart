@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: luzifer/ots
+  repository: ghcr.io/luzifer/ots
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  # renovate: datasource=docker depName=luzifer/ots
+  # renovate: datasource=docker depName=ghcr.io/luzifer/ots
   tag: 'v1.17.2'
 
 redis:
