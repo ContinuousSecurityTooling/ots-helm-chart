@@ -1,6 +1,6 @@
 # ots
 
-![Version: 1.8.3](https://img.shields.io/badge/Version-1.8.3-informational?style=flat-square) ![AppVersion: 1.21.4](https://img.shields.io/badge/AppVersion-1.21.4-informational?style=flat-square)
+![Version: 1.8.4](https://img.shields.io/badge/Version-1.8.4-informational?style=flat-square) ![AppVersion: 1.21.5](https://img.shields.io/badge/AppVersion-1.21.5-informational?style=flat-square)
 
 A Helm chart for deploying OTS
 
@@ -18,7 +18,7 @@ A Helm chart for deploying OTS
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ghcr.io/luzifer/ots"` |  |
-| image.tag | string | `"v1.21.4"` |  |
+| image.tag | string | `"v1.21.5"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.className | string | `""` |  |
