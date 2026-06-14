@@ -9,7 +9,7 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   # renovate: datasource=docker depName=ghcr.io/luzifer/ots
-  tag: 'v1.21.5'
+  tag: 'v1.21.6'
 
 redis:
   enabled: true
